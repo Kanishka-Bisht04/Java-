@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int myNumber =(int)(Math.random()*100);
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int count = 0;
+        do{
+            System.out.println("Enter your number: ");
+            num = sc.nextInt();
+            count++;
+            if(num==myNumber){
+                System.out.println("Woooohhooo!! You guessed it right");
+                break;
+            }
+            else if(num>myNumber){
+                System.out.println("Number is greater choose smaller number");
+            }
+            else{
+                System.out.println("Number is small choose greater number");
+            }
+        }while (true);
+    System.out.printf("You guessed in %d count",count);  
+    }
+}
