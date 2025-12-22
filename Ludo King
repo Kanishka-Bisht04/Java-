@@ -1,0 +1,75 @@
+/******************************************************************************
+ Question 2: Ludo King 
+
+Write a Java program to find the winner of a Ludo game based on points scored by three players.
+
+The program should:
+
+Read Alex’s points
+
+Read Nikil’s points
+
+Read Sam’s points
+
+🔍 Validation rules:
+
+If any player’s points are less than 0 or greater than 50, print
+
+<points> is an invalid number
+
+
+and terminate the program.
+
+🏆 Winner rules:
+
+If Alex has the highest points → print
+
+Alex scored <points> points and won the game
+
+
+If Nikil has the highest points → print
+
+Nikil scored <points> points and won the game
+
+
+Otherwise, Sam is the winner.
+
+*******************************************************************************/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter Alex's points: ");
+	    int A_points = sc.nextInt();
+	    if (A_points > 50 || A_points < 0){
+	        System.out.println(A_points+" is an invalid number");
+	        System.exit(1);
+	    }
+	    System.out.println("Enter Nikil's points: ");
+	    int N_points = sc.nextInt();
+	    if (N_points > 50 || N_points < 0){
+	        System.out.println(N_points+" is an invalid number");
+	        System.exit(1);
+	    }
+	    System.out.println("Enter Sam's points: ");
+	    int S_points = sc.nextInt();
+	    if (S_points > 50 || S_points < 0){
+	        System.out.println(S_points+" is an invalid number");
+	        System.exit(1);
+	    }
+	    if (A_points > N_points && A_points > S_points){
+	        System.out.println("Alex scored " +A_points+ " points and won the game");
+	    }
+	    else if (N_points > A_points && N_points > S_points){
+	        System.out.println("Nikhil scored " +N_points+ " points and won the game");
+	    }
+	    else{
+	         System.out.println("Sam scored " +S_points+ " points and won the game");
+	    }
+	    
+	    
+		
+	}
+}
