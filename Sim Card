@@ -1,0 +1,63 @@
+/******************************************************************************
+Question 3: Sim Card
+
+Write a Java program to analyze a mobile number and compare the sum of odd digits and sum of even digits.
+
+The program should:
+
+Read a phone number (long)
+
+Find the sum of odd digits
+
+Find the sum of even digits
+
+📤 Output rules:
+
+If sum of odd digits > sum of even digits, print
+
+Sum of odd is greater than sum of even
+
+
+If sum of even digits > sum of odd digits, print
+
+Sum of even is greater than sum of odd
+
+
+If both sums are equal, print
+
+Sum of odd and even are equal
+
+*******************************************************************************/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the phone number");
+	    long p_number = sc.nextLong();
+	    long temp = p_number;
+	    int evenSum = 0;
+	    int oddSum = 0;
+	    long rem = 0;
+	    while(temp > 0){
+	        rem = temp % 10;
+	        if(rem % 2 == 0){
+	            evenSum+=rem;
+	        }
+	        else{
+	            oddSum+=rem;
+	        }
+	        temp /= 10;
+	    }
+	    if(evenSum < oddSum){
+	        System.out.println("Sum of odd is greater than sum of even");
+	    }
+	    else if(evenSum > oddSum){
+	        System.out.println("Sum of even is greater than sum of odd");
+	    }
+	    else{
+	        System.out.println("Sum of odd and even are equal");
+	    }
+	}
+}
