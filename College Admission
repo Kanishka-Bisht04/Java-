@@ -1,0 +1,64 @@
+/******************************************************************************
+                Question 1: College Admission 
+
+Write a Java program to get the college admission details of an applicant.
+
+The program should:
+
+Read the applicant name
+
+Read marks obtained in HSC
+
+Read total possible marks in HSC
+
+Read engineering cutoff mark
+
+Read marks obtained in SSLC
+
+Read total possible marks in SSLC
+
+Read gender of the applicant
+
+After getting all inputs, the program should display:
+
+A message saying the application is submitted successfully
+
+The name of the applicant
+
+The engineering cutoff
+
+The gender of the applicant
+
+A best wishes message
+
+*******************************************************************************/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter the applicant name: ");
+		String name = sc.nextLine();
+		System.out.print("Enter marks in HSC: ");
+		float hscMarks= sc.nextFloat();;
+		System.out.print("Enter Total HSC marks: ");
+		float totalHscMarks = sc.nextFloat();
+		System.out.print("Enter cutoff marks: ");
+		float cutoffMark = sc.nextFloat();
+		System.out.print("Enter SSLC marks: ");
+		float sslcMarks = sc.nextFloat();
+		System.out.print("Enter total SSLC marks: ");
+		float totalSslcMarks = sc.nextFloat();
+		System.out.print("Enter gender: ");
+		char gender = sc.next().charAt(0);
+		
+		System.out.println("application is submitted successfully");
+		System.out.printf("Name of the applicant is %s",name);
+		System.out.print("\n");
+		System.out.printf("Engineering cutoff %f",cutoffMark);
+		System.out.print("\n");
+		System.out.printf("Gender of Applicant %s",gender);
+		
+	}
+}
