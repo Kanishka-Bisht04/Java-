@@ -1,0 +1,42 @@
+/******************************************************************************
+Question 5: Sum of Ten 
+
+Write a Java program to calculate the sum of ten consecutive numbers starting from a given number.
+
+The program should:
+
+Read an integer number from the user
+
+Calculate the sum of that number and the next nine numbers
+
+(i.e., number to number + 9)
+
+📤 Output format:
+The sum of ten numbers is <sum>
+*******************************************************************************/
+//without loop 
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int n = 11;
+        int last_number = number+(n-1);
+        double sum = (n/2.0)*(number + last_number);
+        System.out.println("The sum of ten number is "+sum);
+    }
+}
+
+//With loop
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int sum =0;
+        for(int i=number;i<=number+9;i++){
+            sum+=i;
+        }
+        System.out.println("The sum of ten numbers is "+sum);
+    }
+}
