@@ -1,0 +1,47 @@
+/******************************************************************************
+
+                            Question 4: Oxygen Plants 
+
+Write a Java program to calculate the number of plants that can be placed on a floor area and the amount of oxygen produced per day.
+
+The program should:
+
+Read the floor area of the room (length and breadth in meters)
+
+Read the area occupied by a single plant (in cm²)
+
+Calculate the total number of plants that can be placed on the floor
+(ignore fractional plants)
+
+Calculate the oxygen produced per day, assuming each plant produces 0.9 litres of oxygen
+
+📤 Output format:
+
+Display the result in the following format:
+
+Total plants placed on floor area <length>*<breadth> is <number_of_plants> plants produces <oxygen> litres of oxygen in a day
+
+
+*******************************************************************************/
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        double l = sc.nextDouble();
+        double b = sc.nextDouble();
+        double f_area=l*b;
+        double p_area = sc.nextDouble();
+        p_area /=10000;
+        double total_plants = f_area/p_area;
+        total_plants = total_plants - (total_plants % 1);
+        double ox = total_plants * 0.9;
+        
+        System.out.println("Total plants placed on floor area "
+        +f_area+
+        " is "
+        +(int) total_plants+
+        " plants produces "
+        +String.format("%.2f",ox)+
+        " liters of oxygen in a day");
+    }
+}
