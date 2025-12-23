@@ -1,0 +1,94 @@
+/******************************************************************************
+Question 6: Electricity Board
+
+Create a Java application to calculate the **electricity bill amount** for a customer using **OOPS concepts**.
+
+The application should include:
+
+#### 🔹 Class: `CustomerDetails`
+
+With the following private attributes:
+
+* `customerId` (String)
+* `customerName` (String)
+* `phoneNumber` (long)
+* `city` (String)
+* `unitConsumed` (double)
+* `costPerUnit` (double)
+
+Provide:
+
+* Getter and Setter methods for all attributes
+* A **parameterized constructor**
+* A method `calculateElectricityBill()` that returns
+
+  ```
+  unitConsumed * costPerUnit
+  ```
+
+---
+
+### 🔹 Class: `Main`
+
+The program should:
+
+1. Create a `CustomerDetails` object
+2. Read customer details from user
+3. Set values using setter methods
+4. Call `calculateElectricityBill()`
+5. Display the final amount in the format:
+
+```
+Amount to be paid is Rs.<amount>
+```
+
+*(Amount should be displayed up to 2 decimal places)*
+
+
+*******************************************************************************/
+class CustomerDetails{
+        private String customerId;
+        private String customerName;
+        private long phoneNumber;
+        private String city;
+        private double unitConsumed;
+        private double costPerUnit;
+        
+        public void SetCust_id(String customerId){
+            this.customerId=customerId;
+        }
+        public void SetCust_Name(String customerName){
+            this.customerName=customerName;
+        }
+        public void SetPhone_Number(long phoneNumber){
+            this.phoneNumber=phoneNumber;
+        }
+        public void SetCity(String city){
+            this.city=city;
+        }
+        public void SetUnit(double unitConsumed){
+            this.unitConsumed=unitConsumed;
+        }
+        public void SetCost(double costPerUnit){
+            this.costPerUnit=costPerUnit;
+        }
+        public String SetCust_id(){
+            return customerId;
+        }
+        public String SetCust_Name(){
+            return customerName;
+        }
+        public long SetPhone_Number(){
+            return phoneNumber;
+        }
+        public String SetCity(){
+            return city;
+        }
+        public double SetUnit(){
+            return unitConsumed;
+        }
+        public double SetCost(){
+            return costPerUnit;
+        }
+        
+}
